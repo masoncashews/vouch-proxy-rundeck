@@ -1,0 +1,28 @@
+# voucher/vouch-proxy
+# https://github.com/vouch/vouch-proxy
+FROM golang:1.16 AS builder
+
+LABEL maintainer="vouch@bnf.net"
+
+RUN mkdir -p ${GOPATH}/src/github.com/vouch/vouch-proxy
+WORKDIR ${GOPATH}/src/github.com/vouch/vouch-proxy
+
+COPY . .
+
+RUN ./do.sh goget
+RUN ./do.sh gobuildstatic # see `do.sh` for vouch-proxy build details
+RUN ./do.sh install
+
+FROM alpine:latest
+LABEL maintainer="vouch@bnf.net"
+ENV VOUCH_ROOT=/
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+
+#  do.sh requires bash
+RUN apk add --no-cache bash
+COPY do.sh /do.sh
+
+COPY --from=builder /go/bin/vouch-proxy /vouch-proxy
+EXPOSE 9090
+ENTRYPOINT ["/vouch-proxy"]
+HEALTHCHECK --interval=1m --timeout=5s CMD [ "/vouch-proxy", "-healthcheck" ]
