@@ -1,3 +1,6 @@
+# ***NOTE*** - This was cloned from https://vouch/vouch-proxy on September 20th, 2021 to allow for changes required by Rundeck OSS preauthentication
+
+
 # Vouch Proxy
 
 [![GitHub stars](https://img.shields.io/github/stars/vouch/vouch-proxy.svg)](https://github.com/vouch/vouch-proxy)
