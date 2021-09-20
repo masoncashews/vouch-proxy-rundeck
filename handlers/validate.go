@@ -100,10 +100,10 @@ func generateCustomClaimsHeaders(w http.ResponseWriter, claims *jwtmanager.Vouch
 					if val, ok := v.([]interface{}); ok {
 						strs := make([]string, len(val))
 						for i, v := range val {
-							strs[i] = fmt.Sprintf("\"%s\"", v)
+							strs[i] = fmt.Sprintf("%s%s%s", cfg.Cfg.Headers.ClaimsQualifier, v, cfg.Cfg.Headers.ClaimsQualifier)
 						}
 						log.Debugf("Adding header for claim %s - %s: %s", k, header, val)
-						w.Header().Add(header, strings.Join(strs, ","))
+						w.Header().Add(header, strings.Join(strs, cfg.Cfg.Headers.ClaimsSeparator))
 					} else {
 						// convert to string
 						val := fmt.Sprint(v)
