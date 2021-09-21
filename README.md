@@ -1,10 +1,7 @@
-# Vouch Proxy
+# ***NOTE*** - This was cloned from [Vouch-Proxy](https://github.com/vouch/vouch-proxy) on September 20th, 2021 to allow for changes required by [Rundeck Community](https://www.rundeck.com/open-source) for preauthentication.
 
-[![GitHub stars](https://img.shields.io/github/stars/vouch/vouch-proxy.svg)](https://github.com/vouch/vouch-proxy)
-[![Build Status](https://travis-ci.org/vouch/vouch-proxy.svg?branch=master)](https://travis-ci.org/vouch/vouch-proxy)
-[![Go Report Card](https://goreportcard.com/badge/github.com/vouch/vouch-proxy)](https://goreportcard.com/report/github.com/vouch/vouch-proxy)
-[![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/vouch/vouch-proxy/blob/master/LICENSE)
-[![GitHub version](https://img.shields.io/github/v/tag/vouch/vouch-proxy.svg?sort=semver&color=green)](https://github.com/vouch/vouch-proxy)
+
+# Vouch Proxy
 
 An SSO solution for Nginx using the [auth_request](http://nginx.org/en/docs/http/ngx_http_auth_request_module.html) module. Vouch Proxy can protect all of your websites at once.
 
