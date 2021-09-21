@@ -74,16 +74,20 @@ type Config struct {
 	}
 
 	Headers struct {
-		JWT             string            `mapstructure:"jwt"`
-		User            string            `mapstructure:"user"`
-		QueryString     string            `mapstructure:"querystring"`
-		Redirect        string            `mapstructure:"redirect"`
-		Success         string            `mapstructure:"success"`
-		Error           string            `mapstructure:"error"`
-		ClaimHeader     string            `mapstructure:"claimheader"`
-		Claims          []string          `mapstructure:"claims"`
-		AccessToken     string            `mapstructure:"accesstoken"`
-		IDToken         string            `mapstructure:"idtoken"`
+		JWT                string   `mapstructure:"jwt"`
+		User               string   `mapstructure:"user"`
+		QueryString        string   `mapstructure:"querystring"`
+		Redirect           string   `mapstructure:"redirect"`
+		Success            string   `mapstructure:"success"`
+		Error              string   `mapstructure:"error"`
+		ClaimHeader        string   `mapstructure:"claimheader"`
+		Claims             []string `mapstructure:"claims"`
+		AccessToken        string   `mapstructure:"accesstoken"`
+		IDToken            string   `mapstructure:"idtoken"`
+		ClaimsHeaderFormat struct {
+			Qualifier string `mapstructure:"qualifier"`
+			Separator string `mapstructure:"separator"`
+		}
 		ClaimsQualifier string            `mapstructure:"claimsqualifier"`
 		ClaimsSeparator string            `mapstructure:"claimsSeparator"`
 		ClaimsCleaned   map[string]string // the rawClaim is mapped to the actual claims header
