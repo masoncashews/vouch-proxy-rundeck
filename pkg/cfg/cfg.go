@@ -74,17 +74,17 @@ type Config struct {
 	}
 
 	Headers struct {
-		JWT               string   `mapstructure:"jwt"`
-		User              string   `mapstructure:"user"`
-		QueryString       string   `mapstructure:"querystring"`
-		Redirect          string   `mapstructure:"redirect"`
-		Success           string   `mapstructure:"success"`
-		Error             string   `mapstructure:"error"`
-		ClaimHeader       string   `mapstructure:"claimheader"`
-		Claims            []string `mapstructure:"claims"`
-		AccessToken       string   `mapstructure:"accesstoken"`
-		IDToken           string   `mapstructure:"idtoken"`
-		ClaimHeaderFormat struct {
+		JWT                string   `mapstructure:"jwt"`
+		User               string   `mapstructure:"user"`
+		QueryString        string   `mapstructure:"querystring"`
+		Redirect           string   `mapstructure:"redirect"`
+		Success            string   `mapstructure:"success"`
+		Error              string   `mapstructure:"error"`
+		ClaimHeader        string   `mapstructure:"claimheader"`
+		Claims             []string `mapstructure:"claims"`
+		AccessToken        string   `mapstructure:"accesstoken"`
+		IDToken            string   `mapstructure:"idtoken"`
+		ClaimsHeaderFormat struct {
 			Qualifier string `mapstructure:"qualifier"`
 			Delimiter string `mapstructure:"delimiter"`
 		}

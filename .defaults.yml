@@ -49,7 +49,7 @@ vouch:
     redirect: X-Vouch-Requested-URI
     # claims:
     claimheader: X-Vouch-IdP-Claims-
-    claimheaderformat:
+    claimsheaderformat:
       qualifier: "\""
       delimiter: ","
     # https://github.com/vouch/vouch-proxy/issues/287
