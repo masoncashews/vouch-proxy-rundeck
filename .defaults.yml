@@ -49,9 +49,9 @@ vouch:
     redirect: X-Vouch-Requested-URI
     # claims:
     claimheader: X-Vouch-IdP-Claims-
-    claimsheaderformat:
+    claimheaderformat:
       qualifier: "\""
-      separator: ","
+      delimiter: ","
     # https://github.com/vouch/vouch-proxy/issues/287
     # accesstoken: X-Vouch-IdP-AccessToken
     # idtoken: X-Vouch-IdP-IdToken
