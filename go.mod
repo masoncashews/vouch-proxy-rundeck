@@ -1,4 +1,4 @@
-module github.com/vouch/vouch-proxy
+module github.com/masoncashews/vouch-proxy-rundeck
 
 go 1.16
 
